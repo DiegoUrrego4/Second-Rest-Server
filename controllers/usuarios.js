@@ -2,7 +2,6 @@ const { response, request } = require('express');
 const bcryptjs = require('bcryptjs');
 const Usuario = require('../models/usuario');
 
-
 const usuariosGet = (req = request, res = response) => {
   const { q, nombre = 'No Name', apikey } = req.query;
   res.json({
@@ -22,19 +21,10 @@ const usuariosPut = (req, res = response) => {
 };
 
 const usuariosPost = async (req, res = response) => {
-  
-
   // Pequeña validación del body
   const { nombre, correo, contraseña, rol } = req.body;
   const usuario = new Usuario({ nombre, correo, contraseña, rol });
 
-  // Verificar si el correo existe
-  const existeEmail = await Usuario.findOne({ correo });
-  if (existeEmail) {
-    return res.status(400).json({
-      msg: `El correo ${correo} ha sido registrado previamente.`,
-    });
-  }
   /*
   Encriptar la contraseña
   Este es el nivel de encriptación que vamos a usar, por defecto viene en 10 genSaltSync(10)

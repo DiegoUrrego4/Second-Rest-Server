@@ -31,7 +31,6 @@ const UsuarioSchema = Schema({
 });
 
 /**
- * 
  * @returns usuario sin las propiedades contraseña y versión
  */
 
