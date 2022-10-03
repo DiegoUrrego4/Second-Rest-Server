@@ -1,3 +1,6 @@
-# Second-Rest-Server
-Rest server creado  para la identificación de usuarios y usuarios guardados en BD usando las mejores prácticas.
-Construido enteramente usando Node js
+# Rest-Server Usuarios
+Rest server creado con funcionalidades de un CRUD para los usuarios manejando diferentes roles, desactivaciones y validaciones de todo tipo, intentando hacer uso de las buenas prácticas de programación.
+
+Esta aplicación fue desplegada en la plataforma Heroku para su obtención y guardado de datos en Mongo.
+
+Construido enteramente usando Node js. 😁👨‍💻
